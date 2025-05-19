@@ -14,7 +14,7 @@ const generateTransactions = (count = 20): Transaction[] =>
   Array.from({ length: count }, () => {
     const type = faker.helpers.arrayElement(["Credit", "Debit"] as const);
     return {
-      date: faker.date.recent(30).toISOString().split("T")[0],
+      date: faker.date.recent().toISOString().split("T")[0],
       description: faker.commerce.productName(),
       type,
       category: faker.commerce.department(),
